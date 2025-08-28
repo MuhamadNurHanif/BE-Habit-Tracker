@@ -45,7 +45,6 @@ def logout_view(request: HttpRequest):
 @router.get("me", response=UserOut)
 def me(request: HttpRequest):
     if not request.user.is_authenticated:
-        # Ninja + django_auth akan otomatis 401; ini fallback:
         raise PermissionError("Not authenticated")
     u = request.user
     return UserOut(id=u.id, username=u.username, email=u.email)

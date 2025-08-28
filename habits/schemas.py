@@ -39,6 +39,10 @@ class HabitLogOut(HabitLogBase):
     id: int
     habit_id: int
 
-# ---- Composite ----
 class HabitWithLogs(HabitOut):
     logs: List[HabitLogOut] = []
+
+
+# class UserOut(Schema):
+#     id: int
+#     username: st

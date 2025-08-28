@@ -5,7 +5,6 @@ from ninja.security import django_auth
 from users.views import router as users_router
 from habits.views import router as habits_router
 
-# Pakai auth session Django (login via endpoint /api/users/login)
 api = NinjaAPI(auth=django_auth)
 
 api.add_router("/users/", users_router)

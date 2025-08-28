@@ -11,13 +11,11 @@ from .schemas import (
 
 router = Router(tags=["habits"])
 
-# ---------- Helpers ----------
 def _require_auth(request: HttpRequest):
     if not request.user.is_authenticated:
         raise PermissionError("Not authenticated")
     return request.user
 
-# ---------- Habits ----------
 @router.get("/", response=List[HabitOut])
 def list_habits(request: HttpRequest, limit: int = 20, offset: int = 0, q: Optional[str] = None):
     user = _require_auth(request)
@@ -67,7 +65,6 @@ def delete_habit(request: HttpRequest, habit_id: int):
     habit.delete()
     return {"success": True}
 
-# ---------- Habit Logs ----------
 @router.get("/{habit_id}/logs", response=List[HabitLogOut])
 def list_logs(
     request: HttpRequest,
@@ -95,7 +92,6 @@ def create_log(request: HttpRequest, habit_id: int, payload: HabitLogCreate):
         defaults={"status": payload.status, "notes": payload.notes or ""},
     )
     if not created:
-        # Jika sudah ada log di tanggal itu, update status/notes
         log.status = payload.status
         log.notes = payload.notes or ""
         log.save()

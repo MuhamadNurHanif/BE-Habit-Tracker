@@ -49,9 +49,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "habit_tracker.wsgi.application"
 ASGI_APPLICATION = "habit_tracker.asgi.application"
-
-# --- Database ---
-# Dev (default): SQLite
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
