@@ -1,7 +1,6 @@
 # BE-Habit-Tracker
 Techstack: django-ninja
 
-
 # Struktur Direktori
 BE-Habit-Tracker/           # Root project
 ├── habit_tracker/          # Folder "utama" project (setting Django)
