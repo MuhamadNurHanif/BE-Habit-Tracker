@@ -1,19 +1,65 @@
-# BE-Habit-Tracker
-Techstack: django-ninja
+---
 
-# Struktur Direktori
-BE-Habit-Tracker/           # Root project
-├── habit_tracker/          # Folder "utama" project (setting Django)
-│   ├── settings.py         # Konfigurasi project (database, apps, dll)
-│   ├── urls.py             # Routing utama
-│   ├── asgi.py / wsgi.py   # Entry point server (abaikan dulu)
+##  **Backend – BE-Habit-Tracker**
+
+```
+# BE-Habit-Tracker
+
+Backend untuk aplikasi **Habit Tracker** menggunakan **Django + Django-Ninja** dengan database PostgreSQL.  
+Berfungsi sebagai REST API untuk mendukung CRUD habit/todo di frontend (React + Vite).
+
+---
+
+## Tech Stack
+
+- **Framework**: Django 5.x
+- **API**: Django-Ninja (FastAPI-like for Django)
+- **Database**: PostgreSQL
+- **ORM**: Django ORM
+
+---
+
+## Struktur Direktori
+
+BE-Habit-Tracker/
+├── habit_tracker/
+│ ├── settings.py
+│ ├── urls.py
+│ ├── asgi.py
 │
-├── habits/                 # App khusus untuk Habit + HabitLog
-│   ├── models.py           # Tempat bikin schema tabel DB (pakai Django ORM)
-│   ├── schemas.py          # Tempat bikin schema Pydantic (buat Django Ninja API)
-│   ├── views.py            # Tempat bikin endpoint REST API
-│   ├── urls.py             # Routing khusus app habits
+├── habits/
+│ ├── models.py #
+│ ├── schemas.py #
+│ ├── views.py #
+│ ├── urls.py #
 │
-├── manage.py               # Command line Django (jalankan project, migrate, dll)
-├── venv/                   # Virtual environment Python
-└── README.md               # Dokumentasi
+├── manage.py
+├── venv/
+└── README.md
+
+---
+
+## Endpoints
+
+GET http://127.0.0.1:8000/api/todos/ → list todo
+POST http://127.0.0.1:8000/api/todos/ → create todo
+GET http://127.0.0.1:8000/api/todos/{id} → detail
+PUT http://127.0.0.1:8000/api/todos/{id} → update
+DELETE http://127.0.0.1:8000/api/todos/{id} → delete
+
+---
+
+## Cara Menjalankan
+
+Clone repo:
+
+```bash
+git clone https://github.com/username/BE-Habit-Tracker.git
+cd BE-Habit-Tracker
+python -m venv venv
+source venv/bin/activate
+venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
