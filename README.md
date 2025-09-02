@@ -7,7 +7,7 @@ Berfungsi sebagai REST API untuk mendukung CRUD habit/todo di frontend (React + 
 
 ## Tech Stack
 
-- **Framework**: Django
+- **Framework**: Django 5.2.5
 - **API**: Django-Ninja
 - **Database**: PostgreSQL
 - **ORM**: Django ORM
