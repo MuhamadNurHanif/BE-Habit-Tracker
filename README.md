@@ -15,6 +15,7 @@ Berfungsi sebagai REST API untuk mendukung CRUD habit/todo di frontend (React + 
 ---
 
 ## Struktur Direktori
+
 ```bash
 BE-Habit-Tracker/
 ├── habit_tracker/
@@ -35,6 +36,7 @@ BE-Habit-Tracker/
 ---
 
 ## Endpoints
+
 ```bash
 GET http://127.0.0.1:8000/api/todos/ → list todo
 POST http://127.0.0.1:8000/api/todos/ → create todo
@@ -42,11 +44,10 @@ GET http://127.0.0.1:8000/api/todos/{id} → detail
 PUT http://127.0.0.1:8000/api/todos/{id} → update
 DELETE http://127.0.0.1:8000/api/todos/{id} → delete
 ```
+
 ---
 
 ## Cara Menjalankan
-
-Clone repo:
 
 ```bash
 git clone https://github.com/username/BE-Habit-Tracker.git
