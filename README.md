@@ -1,8 +1,3 @@
----
-
-##  **Backend – BE-Habit-Tracker**
-
-```
 # BE-Habit-Tracker
 
 Backend untuk aplikasi **Habit Tracker** menggunakan **Django + Django-Ninja** dengan database PostgreSQL.  
@@ -12,15 +7,15 @@ Berfungsi sebagai REST API untuk mendukung CRUD habit/todo di frontend (React + 
 
 ## Tech Stack
 
-- **Framework**: Django 5.x
-- **API**: Django-Ninja (FastAPI-like for Django)
+- **Framework**: Django
+- **API**: Django-Ninja
 - **Database**: PostgreSQL
 - **ORM**: Django ORM
 
 ---
 
 ## Struktur Direktori
-
+```bash
 BE-Habit-Tracker/
 ├── habit_tracker/
 │ ├── settings.py
@@ -28,25 +23,25 @@ BE-Habit-Tracker/
 │ ├── asgi.py
 │
 ├── habits/
-│ ├── models.py #
-│ ├── schemas.py #
-│ ├── views.py #
-│ ├── urls.py #
-│
+│ ├── models.py
+│ ├── schemas.py
+│ ├── views.py
+│ ├── urls.py
 ├── manage.py
 ├── venv/
 └── README.md
+```
 
 ---
 
 ## Endpoints
-
+```bash
 GET http://127.0.0.1:8000/api/todos/ → list todo
 POST http://127.0.0.1:8000/api/todos/ → create todo
 GET http://127.0.0.1:8000/api/todos/{id} → detail
 PUT http://127.0.0.1:8000/api/todos/{id} → update
 DELETE http://127.0.0.1:8000/api/todos/{id} → delete
-
+```
 ---
 
 ## Cara Menjalankan
